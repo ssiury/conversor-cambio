@@ -1,8 +1,8 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:login/widgets/Switch_Theme.dart';
 
-// ignore: use_key_in_widget_constructors
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() {
@@ -11,33 +11,49 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  bool isDartTheme = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(
+      drawer: Drawer(
         child: Column(
           children: [
-            ListTile(
-              leading: Icon(Icons.home_outlined),
-              title: Text('Início'),
-              subtitle: Text('Tela de início'),
+            const ListTile(
+              leading: Icon(Icons.all_inbox),
+              title: Text('opção 1'),
+              subtitle: Text('subtitulo 1'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.all_inbox),
+              title: Text('opção 2'),
+              subtitle: Text('subtitulo 2'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.all_inbox),
+              title: Text('opção 3'),
+              subtitle: Text('subtitulo 3'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.all_inbox),
+              title: Text('opção 4'),
+              subtitle: Text('subtitulo 4'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.all_inbox),
+              title: Text('opção 5'),
+              subtitle: Text('subtitulo 5'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.all_inbox),
+              title: Text('opção 6'),
+              subtitle: Text('subtitulo 6'),
             ),
             ListTile(
-              leading: Icon(Icons.attach_money),
-              title: Text('Câmbio'),
-              subtitle: Text('Informação das Moedas'),
-            ),
-            ListTile(
-              leading: Icon(Icons.help_outline),
-              title: Text('Suporte'),
-              subtitle: Text('Tela para ajudar o Usuário'),
-            ),
-            ListTile(
-              leading: Icon(Icons.info_outlined),
-              title: Text('Sobre'),
-              subtitle: Text('Informações sobre a Empresa'),
-            ),
+              title: const Text(
+                'Tema Escuro: ',
+                style: TextStyle(fontSize: 20.0),
+              ),
+              trailing: Switch_Theme(),
+            )
           ],
         ),
       ),
@@ -45,17 +61,13 @@ class HomePageState extends State<HomePage> {
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         title: const Text(
-          'TÍTULO DO APP',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          'Título do App',
+          style: TextStyle(
+              fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue[900],
-        child: const Icon(
-          Icons.info,
-          color: Colors.white,
-        ),
-        onPressed: () {},
+      body: const Center(
+        child: Text('Página Home'),
       ),
     );
   }
