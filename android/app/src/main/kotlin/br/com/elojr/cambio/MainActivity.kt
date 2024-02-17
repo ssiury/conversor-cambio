@@ -1,4 +1,4 @@
-package br.com.elojr.login
+package br.com.elojr.cambio
 
 import io.flutter.embedding.android.FlutterActivity
 
